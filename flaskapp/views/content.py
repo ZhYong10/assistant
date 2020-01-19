@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template,send_file
 
 
 bp = Blueprint('content', __name__)
@@ -8,7 +8,8 @@ bp = Blueprint('content', __name__)
 def home():
     """GET /: render homepage
     """
-    return render_template('/content/home.html')
+    return render_template('/index.html')
+    # return render_template('/content/home.html')
 
 
 @bp.route('/feedback', methods=['GET', 'POST'])
